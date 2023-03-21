@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+    <style>
+        .container{
+            margin:auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            
+        }
+
+        .wrapper{
+            width:400px;
+            height:auto;
+            padding:20px;
+        }
+
+        input{
+            width:95%;
+            padding: 10px;
+            border-radius: 8px;
+            border: 2px solid lightskyblue;
+            margin-top:20px;
+        }
+
+        input:active, input:focus{
+            outline:none;
+        }
+
+        button{
+            /* x, y */
+            padding: 20px 10px;
+            color:white;
+            width:100%;
+            background-color: rgb(43, 43, 206);
+            border-radius: 8px;
+            border: 0;
+            outline: none;
+            margin-top: 20px;
+            font-size: 1.2rem;
+            font-weight: bold;
+        }
+
+        button:hover{
+            background-color: rgb(104, 104, 237);
+        }
+
+
+    </style>
+
+</head>
+<body>
+
+    <div class="container">
+        <div class="wrapper">
+            <input id="name" type="text" placeholder="Enter your name">
+            <input id="initial" type="text" placeholder="Enter your initial">
+            <button onclick ="checkInput()">Calculate</button>
+            <p id="outLabel" style="font-size: 20px; font-weight:bold;"></p>
+        </div>
+    </div>
+
+
+    <script>
+
+        const checkInput=()=>{
+
+            const x = document.getElementById('name')
+
+            const y = document.getElementById('initial')
+
+            const label = document.getElementById('outLabel')
+
+            let x1 = parseInt(x.value);
+            let y1 = parseInt(y.value)
+
+            let result = x1 * y1 
+
+            label.innerText =  `The Index is: ${x1 * y1}`
+
+        }
+
+    </script>
+
+</body>
+</html>
